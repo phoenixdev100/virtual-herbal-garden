@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle with Start Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            background-image: url('assets/bg2.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            perspective: 1000px; /* Adding perspective for 3D effect */
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 70px; /* Adjusted margin to move title upwards */
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Enhanced glowing effect */
+            animation: glow 1.5s ease-in-out infinite; /* Glowing animation */
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+            50% { text-shadow: 0 0 30px rgba(255, 255, 255, 1.5); }
+            100% { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+        }
+
+        .circle {
+            width: 250px;
+            height: 250px;
+            background-image: url('assets/OIP.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Adding shadow for 3D effect */
+            transform: translateZ(0); /* Ensuring the circle stays static */
+        }
+
+        .start-button {
+            padding: 20px 30px;
+            background-color: #2ecc71;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+        }
+
+        .start-button:hover {
+            background-color: #27ae60;
+            transform: scale(1.1); /* Button grows slightly on hover */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adding shadow effect */
+        }
+
+        .start-button:active {
+            transform: scale(0.95); /* Button shrinks slightly on click */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect on click */
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Welcome to Virtual Herbal Garden!</div>
+    <div class="circle"></div>
+    <button class="start-button" onclick="location.href='Home.html'">Start</button>
+</body>
+</html>
