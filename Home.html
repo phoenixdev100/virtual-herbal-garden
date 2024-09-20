@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Herbal Garden!</title>
+    <link rel="icon" href="assets/favicon.ico" type = "image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Adding Google Model Viewer -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">End</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sidebar with clickable circles -->
+    <div class="sidebar">
+        <div class="circle" onclick="showModel('assets/aloevera.glb')">Aloe vera</div>
+        <div class="circle" onclick="showModel('assets/cactus.glb')">Cactus</div>
+        <div class="circle" onclick="showModel('assets/geraniumflower.glb')">Geranium Flower</div>
+        <div class="circle" onclick="showModel('assets/mimose.glb')">Mimose</div>
+    </div>
+
+    <!-- Main content area with the model viewer -->
+    <div class="main-content">
+        <model-viewer id="modelViewer" src="assets/aloevera.glb" alt="Aloe Vera 3D Model" auto-rotate camera-controls></model-viewer>
+    </div>
+
+    <script>
+        // Function to change the displayed model
+        function showModel(modelFile) {
+            const viewer = document.getElementById('modelViewer');
+            console.log("Loading model:", modelFile);
+            viewer.src = modelFile;
+        }
+    </script>
+</body>
+</html>
