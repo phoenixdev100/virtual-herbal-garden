@@ -31,7 +31,6 @@ AI Chatbot (Python/Node.js with Natural Language Processing)
 AI/ML: Natural Language Processing for the Herbi Chatbot
 Database: MongoDB/MySQL (for storing plant information)
 
-<br>
 ## 💻 phoenixdev100
 <br>
 
